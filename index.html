@@ -126,12 +126,14 @@ h2 {
 .quadimmagine {
   width: 32vw;
   height: 32vw;
-  background-color: grey;
+  background-color: white;
   margin-bottom: 1vw;
   padding: 0;
 }
 #lav1 {
   background-image: url("img/lav1.png");
+  width: 32vw;
+  height: 32vw;
   background-size: cover;
 }
 #lav5 {
@@ -169,6 +171,27 @@ h2 {
 .modal-header {
   padding: 0 0.5rem 0 0;
 }
+.scrittano {
+  z-index: 100;
+  font-size: 18px;
+  color: #5D6C6E;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 0;
+  transform: translate(0, -21vw);
+  opacity: 0;
+}
+.scritta {
+  z-index: 100;
+  font-size: 18px;
+  color: #5D6C6E;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 0;
+  transform: translate(0, -21vw);
+}
 
 </style>
   </head>
@@ -184,9 +207,9 @@ h2 {
       <a data-scroll href="#home">HOME</a>
       <a data-scroll href="#about">ABOUT</a>
       <a data-scroll href="#formazione">FORMAZIONE</a>
-      <a data-scroll href="#">LAVORI</a>
-      <a data-scroll href="#">FOTOGRAFIA</a>
-      <a data-scroll href="#">VIAGGI</a>
+      <a data-scroll href="#lavori">LAVORI</a>
+      <a data-scroll href="#fotografia">FOTOGRAFIA</a>
+      <a data-scroll href="mappa.html">VIAGGI</a>
       <a data-scroll href="#">CONTATTI</a>
     </div>
   <div class="home" id="home">
@@ -275,17 +298,22 @@ h2 {
 <!-- fine istruzione; andrebbe sistemata la cosa del bordino azzurro-->
 
 
-<div class="lavori row">
+
+
+<div class="lavori row" >
   <div class="col ">
     <div id="chefaccio">
       <br>
-    <h2 style="margin-bottom:20px;">LAVORI</h2>
+    <h2 id="lavori" style="margin-bottom:20px;">LAVORI</h2>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
   </div>
 </div>
   <div class="col px-0 ">
-    <div class="quadimmagine" id="lav1" style="z-index:70;">
-      <!--<h2 style="z-index:100;">Dieci Piccoli Indiani</h2>-->
+    <div class="quadimmagine" id="quadimmagine" style="z-index:70;">
+      <div class="immagine" id="lav1"> </div>
+      <div id="scri" class="scrittano">
+        Dieci piccoli indiani
+      </div>
     </div>
     <div class="quadimmagine" id="lav2">
     </div>
@@ -307,7 +335,7 @@ h2 {
 <!-- fine lavori-->
 
 <br>
-<h2 style="font-size:20px">FOTOGRAFIA</h2>
+<h2 style="font-size:20px" id="fotografia">FOTOGRAFIA</h2>
 <br>
 <div class="card-columns">
   <div class="card" data-toggle="modal" data-target="#myModal1">
@@ -322,8 +350,9 @@ h2 {
         </div>
       </div>
     </div>
+    </div>
       <!-- cosa scura da copiare fine-->
-
+<div >
     <img class="card-img-top" src="img/foto1.png" alt="Card image cap">
     <div class="card-body">
       <h2 class="card-title">12 / 02 / 18</h2>
@@ -451,6 +480,7 @@ h2 {
 
 
 
+
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <script type="text/javascript">
 function openNav() {
@@ -464,11 +494,20 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
+function appareScritta() {
+  $("#scri").removeClass("scrittano")
+  $("#scri").addClass("scritta")
+}
+$("#quadimmagine").click(appareScritta);
+
+
+
 
 </script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="jquery.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
