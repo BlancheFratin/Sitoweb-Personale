@@ -40,6 +40,13 @@ z-index: 100;
 color: #fff;
 }
 
+@keyframes striscia {
+  from{
+    width:0%
+    height
+  }
+}
+
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
 position: absolute;
@@ -172,27 +179,74 @@ h2 {
 .modal-header {
   padding: 0 0.5rem 0 0;
 }
-.scrittano {
-  z-index: 100;
-  font-size: 18px;
-  color: #5D6C6E;
-  letter-spacing: 2px;
-  text-align: center;
-  padding-top: 20px;
-  margin-bottom: 0;
-  transform: translate(0, -21vw);
+
+.container {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
   opacity: 0;
+  transition: .5s ease;
+  background-color: white;
 }
-.scritta {
-  z-index: 100;
-  font-size: 18px;
-  color: #5D6C6E;
-  letter-spacing: 2px;
+
+.container:hover .overlay {
+  opacity: 0.7;
+}
+
+.text {
+color: #5D6C6E;
+font-size: 22px;
+letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
-  padding-top: 20px;
-  margin-bottom: 0;
-  transform: translate(0, -21vw);
 }
+
+
+
+nav {
+  margin-top: 40px;
+  padding: 24px;
+  text-align: center;
+  font-family: Raleway;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+#nav-1 {
+  background: #3fa46a;
+}
+.link-1 {
+  transition: 0.3s ease;
+  background: #383838;
+  color: #ffffff;
+  text-decoration: none;
+  border-top: 4px solid #383838;
+  border-bottom: 4px solid #383838;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+.link-1:hover {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0;
+}
+
 
 </style>
   </head>
@@ -205,13 +259,13 @@ h2 {
   <body>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a data-scroll href="#home">HOME</a>
-      <a data-scroll href="#about">ABOUT</a>
-      <a data-scroll href="#formazione">FORMAZIONE</a>
-      <a data-scroll href="#lavori">LAVORI</a>
-      <a data-scroll href="#fotografia">FOTOGRAFIA</a>
-      <a data-scroll href="mappa.html">VIAGGI</a>
-      <a data-scroll href="#">CONTATTI</a>
+      <a data-scroll href="#home" class="link-1">HOME</a>
+      <a data-scroll href="#about" class="link-1">ABOUT</a>
+      <a data-scroll href="#formazione" class="link-1">FORMAZIONE</a>
+      <a data-scroll href="#lavori" class="link-1">LAVORI</a>
+      <a data-scroll href="#fotografia" class="link-1">FOTOGRAFIA</a>
+      <a data-scroll href="mappa.html" class="link-1">VIAGGI</a>
+      <a data-scroll href="#" class="link-1">CONTATTI</a>
     </div>
   <div class="home" id="home">
       <div class="striscia">
@@ -276,13 +330,13 @@ h2 {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="img/scu1.png" alt="First slide">
+      <img class="d-block w-100" src="img/scu2.png" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/scu2.png" alt="Second slide">
+      <img class="d-block w-100" src="img/scu3.png" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/scu3.png" alt="Third slide">
+      <img class="d-block w-100" src="img/scu1.png" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -310,25 +364,34 @@ h2 {
   </div>
 </div>
   <div class="col px-0 ">
-    <div class="quadimmagine" id="quadimmagine" style="z-index:70;">
-      <div class="immagine" id="lav1"> </div>
-      <div id="scri" class="scrittano">
-        Dieci piccoli indiani
+      <div class="container quadimmagine">
+      <img src="img/lav1.png" alt="Avatar" class="image">
+      <div class="overlay">
+        <div class="text">Dieci Piccoli Indiani</div>
       </div>
     </div>
     <div class="quadimmagine" id="lav2">
     </div>
-    <div class="quadimmagine" id="lav3">
-      <h2 id="scritta" class="soloImmagine">Tour de Cartes</h2>
+
+    <div class="container quadimmagine">
+    <img src="img/lav3.png" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Tour De Cartes</div>
+    </div>
     </div>
 
   </div>
   <div class="col px-0 ">
     <div class="quadimmagine" id="lav4">
     </div>
-    <div class="quadimmagine" id="lav5">
-      <h2 id="scritta" class="soloImmagine">DesignVerso</h2>
+
+    <div class="container quadimmagine">
+    <img src="img/lav5.png" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Lora Lamm</div>
     </div>
+    </div>
+
     <div class="quadimmagine" id="lav6">
     </div>
   </div>
@@ -468,13 +531,6 @@ h2 {
       </div>
       </div>
     </div>
-
-
-
-
-
-
-
 
 
 
