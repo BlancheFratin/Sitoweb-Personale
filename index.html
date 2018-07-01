@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono|Roboto+Slab" rel="stylesheet">
 <style media="screen">
 /* The side navigation menu */
 .sidenav {
@@ -33,6 +33,7 @@ transition: 0.3s;
 letter-spacing: 5px;
 text-transform: uppercase;
 z-index: 100;
+font-family: 'Open Sans', sans-serif;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -94,12 +95,31 @@ padding: 20px;
 h1 {
   font-size: 26px;
   text-align: center;
-  letter-spacing: 6px;
+  line-height: 32px;
+  letter-spacing: 7px;
   position: relative;
+  font-family: 'Roboto Slab', serif;
 }
 p{
   text-align: center;
   font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+h2 {
+  z-index: 100;
+  font-size: 24px;
+  color: #5D6C6E;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 0;
+  font-family: 'Roboto Slab', serif;
+}
+h3{
+font-family: 'Roboto Mono', monospace;
+font-size: 13px;
+line-height: 20px;
+color: #5D6C6E;
 }
 #simbolino {
   position: relative;
@@ -117,17 +137,9 @@ p{
   margin-bottom: 10px;
 }
 #formazione {
-  background-color: #B9E0E5;
+  background-color: #B8E0E5;
 }
-h2 {
-  z-index: 100;
-  font-size: 18px;
-  color: #5D6C6E;
-  letter-spacing: 2px;
-  text-align: center;
-  padding-top: 20px;
-  margin-bottom: 0;
-}
+
 #chefaccio{
   padding: 20px 0 20px 20px;
 }
@@ -208,7 +220,7 @@ h2 {
 }
 
 .text {
-color: #5D6C6E;
+color: #000000;
 font-size: 22px;
 letter-spacing: 2px;
   position: absolute;
@@ -217,6 +229,7 @@ letter-spacing: 2px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
 
@@ -236,18 +249,102 @@ nav {
   background: #383838;
   color: #ffffff;
   text-decoration: none;
-  border-top: 4px solid #383838;
-  border-bottom: 4px solid #383838;
+  border-top: 3px solid #383838;
+  border-bottom: 3px solid #383838;
   padding: 20px 0;
   margin: 0 20px;
 }
 .link-1:hover {
-  border-top: 4px solid #ffffff;
-  border-bottom: 4px solid #ffffff;
+  border-top: 3px solid #C4C4C4;
+  border-bottom: 3px solid #C4C4C4;
   padding: 6px 0;
 }
 
+.wrapper {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  width: 100vw;
+  background-color: #D6D6D6;
+  margin-top:5vh;
 
+}
+
+i {
+  padding: 20px 20px;
+}
+
+.wrapper i#beha {
+  color: #000000;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 150ms;
+}
+
+.wrapper i#beha:hover {
+  color: #0077F9;
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
+}
+
+.wrapper i#insta {
+  color: #000000;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 150ms;
+}
+
+.wrapper i#insta:hover {
+  color: #CC2981;
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
+}
+
+.wrapper i#pin {
+  color: #000000;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: all ease-in-out 150ms;
+}
+
+.wrapper i#pin:hover {
+  color: #B2121B;
+  margin-top: -10px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+  transform: translate(0, -5);
+}
+.wrapper i#vim {
+  color: #000000;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 150ms;
+}
+.wrapper i#vim:hover {
+  color: #09AFD6;
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
+}
+.wrapper i#drib{
+  color: #000000;
+  cursor: pointer;
+  text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 150ms;
+}
+.wrapper i#drib:hover{
+  color: #734595;
+  margin-top: -10px;
+  text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(0, -8);
+}
+#contatti{
+  font-family: 'Open Sans', sans-serif;
+}
 </style>
   </head>
 
@@ -265,7 +362,7 @@ nav {
       <a data-scroll href="#lavori" class="link-1">LAVORI</a>
       <a data-scroll href="#fotografia" class="link-1">FOTOGRAFIA</a>
       <a data-scroll href="mappa.html" class="link-1">VIAGGI</a>
-      <a data-scroll href="#" class="link-1">CONTATTI</a>
+      <a data-scroll href="#contatti" class="link-1">CONTATTI</a>
     </div>
   <div class="home" id="home">
       <div class="striscia">
@@ -360,9 +457,10 @@ nav {
     <div id="chefaccio">
       <br>
     <h2 id="lavori" style="margin-bottom:20px;">LAVORI</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+    <p style="padding:0 5vh;">I miei primi lavori in università; una galleria che si espanderà mentre imparo, diventando il mio portfolio. Le foto sono collegati alla pagina behance, in cui si possono trovare fotografie e contenuti in più.</p>
   </div>
 </div>
+<a href="https://www.behance.net/gallery/67109301/Agatha-Christie-And-then-there-were-none">
   <div class="col px-0 ">
       <div class="container quadimmagine">
       <img src="img/lav1.png" alt="Avatar" class="image">
@@ -372,7 +470,7 @@ nav {
     </div>
     <div class="quadimmagine" id="lav2">
     </div>
-
+</a>
     <div class="container quadimmagine">
     <img src="img/lav3.png" alt="Avatar" class="image">
     <div class="overlay">
@@ -385,12 +483,14 @@ nav {
     <div class="quadimmagine" id="lav4">
     </div>
 
+<a href="https://www.behance.net/gallery/67184873/DesignVerso-Magazine-Lora-Lamm">
     <div class="container quadimmagine">
     <img src="img/lav5.png" alt="Avatar" class="image">
     <div class="overlay">
       <div class="text">Lora Lamm</div>
     </div>
     </div>
+  </a>
 
     <div class="quadimmagine" id="lav6">
     </div>
@@ -402,7 +502,7 @@ nav {
 <h2 style="font-size:20px" id="fotografia">FOTOGRAFIA</h2>
 <br>
 
-<div class="card-columns">
+<div class="card-columns" style="margin-left:5vh;margin-right:5vh;">
 
   <div class="card" data-toggle="modal" data-target="#myModal1">
     <div class="modal fade" id="myModal1" role="dialog">
@@ -424,9 +524,9 @@ nav {
 
   <div class="card p-3">
     <blockquote class="blockquote mb-0 card-body">
-      <p>Photography is an art of observation. It's about finding something interesting in a ordinary place. It has little to do with the things you see and everything to do with how you see them </p>
+      <h3>Photography is an art of observation. It's about finding something interesting in a ordinary place. It has little to do with the things you see and everything to do with how you see them </h3>
       <footer class="blockquote-footer">
-        <small class="text-muted">
+        <small class="text-muted" style="font-family: 'Roboto Mono', monospace;">
           Elliot Erwitt
         </small>
       </footer>
@@ -488,9 +588,9 @@ nav {
 
   <div class="card p-3 text-right">
     <blockquote class="blockquote mb-0">
-      <p>“There comes a moment when it is no longer you who takes the photograph, but receives the way to do it quite naturally and fully.</p>
+      <h3>“There comes a moment when it is no longer you who takes the photograph, but receives the way to do it quite naturally and fully.</h3>
       <footer class="blockquote-footer">
-        <small class="text-muted">
+        <small class="text-muted" style="font-family: 'Roboto Mono', monospace; text-align: left;">
           Sebastiao Salgado
         </small>
       </footer>
@@ -533,6 +633,84 @@ nav {
     </div>
 
 
+<div id="contatti">
+  <h2 style="text-align:left; padding-bottom:2vw; padding-top:3vw; padding-left:5vh;">Contact: Lavoriamo insieme</h2>
+  <form id="contact-form" method="post" action="contact.php" role="form" style="padding-left:5vh;padding-right:5vh;">
+      <div class="messages"></div>
+      <div class="controls">
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_name">Nome</label>
+                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Nome" required="required" data-error="Errore: è richiesto il nome">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_lastname">Cognome</label>
+                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Cognome" required="required" data-error="Errore: è richiesto il cognome">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_email">Email</label>
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="required" data-error="Errore: è richiesto un indirizzo mail valido">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_phone">Telefono</label>
+                      <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Telefono" data-error="Errore: è richiesto un numero di telefono valido">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="form_message">Messaggio</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Messaggio" rows="4" required="required" data-error="Ricordati di scrivermi un messaggio"></textarea>
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <input type="submit" class="btn btn-outline-dark" value="Invia">
+              </div>
+          </div>
+          </div>
+      </div>
+  </form>
+  <!-- fine contatti-->
+
+  <div class="footer" >
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="wrapper">
+<a href="https://www.behance.net/biancamari3377">
+  <i class="fa fa-2x fa fa-behance" id="beha"> </i>
+</a>
+<a href="https://www.instagram.com/blanche.fratin/">
+  <i class="fa fa-2x fa-instagram" id="insta"> </i>
+</a>
+<a href="https://it.pinterest.com/biancafratin/">
+  <i class="fa fa-2x fa-pinterest" id="pin"></i>
+</a>
+<a href="https://vimeo.com/blanche98">
+  <i class="fa fa-2x fa-vimeo" id="vim"></i>
+</a>
+<a href="https://dribbble.com/vin_Blanc">
+  <i class="fa fa-2x fa-dribbble" id="drib"></i>
+</a>
+
+</div>
+
+
+  </div>
 
 
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
